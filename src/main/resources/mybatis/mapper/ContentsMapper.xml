@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.open.learning.presentation.mapper.ContentsMapper">
+    
+    <select id="selectAll" resultType="com.open.learning.presentation.model.Contents">
+        select id,name,text,address,insert_time from contents order by id desc
+    </select>
+    
+    <insert id="insert">
+        insert into contents(name,text,address,insert_time) values (#{name},#{text},#{address},#{insert_time})
+    </insert>
+    
+</mapper>
